@@ -1,0 +1,27 @@
+package bank_casher;
+
+import java.util.ArrayList;
+import java.util.Random;
+
+public class bank_casher {
+
+public static void main(String[] args) {
+		ArrayList<Integer> numberList = new ArrayList<Integer>();
+		for (int i = 1; i < 46; i++) {
+			numberList.add(i);
+		}
+		
+		ArrayList<Integer> lotto = new ArrayList<Integer>();
+		
+
+		for (int i = 1; i < 7; i++) {
+			int listSize = numberList.size();
+			int randomNum = new Random().nextInt(listSize);
+			lotto.add(numberList.get(randomNum));
+			numberList.remove(randomNum);
+		}
+		
+		System.out.println(lotto);
+
+	}
+}
