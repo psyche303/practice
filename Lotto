@@ -1,0 +1,31 @@
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Random;
+
+public class Lotto {
+	Lotto() {
+		ArrayList<Integer> numberList = new ArrayList<Integer>();
+		for (int i = 1; i < 46; i++) {
+			numberList.add(i);
+		}
+
+		ArrayList<Integer> lotto = new ArrayList<Integer>();
+		for (int i = 1; i < 7; i++) {
+			int listSize = numberList.size();
+			int randomNum = new Random().nextInt(listSize);
+			lotto.add(numberList.get(randomNum));
+			numberList.remove(randomNum);
+		}
+		Collections.sort(lotto);
+		System.out.println(lotto);
+	}
+
+	public static void main(String[] args) {
+
+		Lotto lotto1 = new Lotto();
+		Lotto lotto2 = new Lotto();
+		Lotto lotto3 = new Lotto();
+		Lotto lotto4 = new Lotto();
+		Lotto lotto5 = new Lotto();
+	}
+}
